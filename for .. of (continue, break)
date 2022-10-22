@@ -1,0 +1,27 @@
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Terrorbird','Parotia','Kakapo'];
+ 
+for (const bird of strangeBirds) {
+  if (bird === 'Basan'){ 
+    break; 
+  }
+  console.log(bird);
+} 
+// Shoebill
+// Cockatrice
+
+
+const strangeBirds = ['Shoebill', 'Cockatrice', 'Basan', 'Cow', 'Terrorbird', 'Parotia', 'Kakapo'];
+ 
+for (const bird of strangeBirds) {
+  if  (bird === 'Cow'){
+    continue;
+  }
+  console.log(bird);
+}
+
+// Shoebill
+// Cockatrice
+// Basan
+// Terrorbird
+// Parotia
+// Kakapo
