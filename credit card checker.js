@@ -95,7 +95,6 @@ const findInvalidCards = (cardNumbers) => {
   return invalidCards;
 };
 
-console.log(findInvalidCards(batch));
   // var 2
 
   // const invalidCards = cardNumbers.reduce((acc, cardNumber) => {
@@ -116,4 +115,26 @@ console.log(findInvalidCards(batch));
   //   invalidCards.push(i);
   // }
 
-
+  const invalidCards = findInvalidCards(batch);
+  console.log(invalidCards);
+  
+  const idInvalidCardCompanies = (invalidCardNumbers) => {
+    const companyNames = new Set();
+    invalidCardNumbers.forEach((invalidCardNumber) => {
+      if (invalidCardNumber[0] === 3) {
+        companyNames.add("Amex");
+      } else if (invalidCardNumber[0] === 4) {
+        companyNames.add("Visa");
+      } else if (invalidCardNumber[0] === 5) {
+        companyNames.add("Mastercard");
+      } else if (invalidCardNumber[0] === 6) {
+        companyNames.add("Discover");
+      } else {
+        console.log("Company not found");
+      }
+    });
+  
+    return companyNames;
+  };
+  
+  console.log(idInvalidCardCompanies(invalidCards));
