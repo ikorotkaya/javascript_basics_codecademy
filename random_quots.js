@@ -7,12 +7,12 @@ const adjectives = "responsible grotesque rebel greedy laughable electric zonked
 const adverbs = "dramatically positively hungrily less lively adventurously normally heavily arrogantly loosely shrilly widely deftly mechanically wetly".split(" ");
 
 
-const getRandomWord = (array) => {
-  randomWord = array[Math.floor(Math.random()*array.length)];
-  return randomWord;
-}
 
 const generateRandomPhrase = () => {
+  const getRandomWord = (array) => {
+    randomWord = array[Math.floor(Math.random()*array.length)];
+    return randomWord;
+  }  
   let randomPhrase = `${getRandomWord(adjectives)} ${getRandomWord(nouns)} ${getRandomWord(verbs)} ${getRandomWord(adverbs)}`;
   return randomPhrase;
 };
